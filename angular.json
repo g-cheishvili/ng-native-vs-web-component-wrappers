@@ -282,7 +282,9 @@
               "projects/ng-selectable-list-demo/src/assets"
             ],
             "styles": [
-              "projects/ng-selectable-list-demo/src/styles.scss"
+              "projects/ng-selectable-list-demo/src/styles.scss",
+              "node_modules/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/css_variables.css",
+              "node_modules/fundamental-styles/dist/theming/sap_horizon.css"
             ],
             "scripts": []
           },

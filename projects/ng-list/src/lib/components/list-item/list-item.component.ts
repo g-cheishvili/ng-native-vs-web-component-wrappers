@@ -1,5 +1,5 @@
 import {Component, ContentChild, OnInit, ViewEncapsulation} from '@angular/core';
-import {ListItemTitle} from "../../tokens";
+import {ListItemTitleToken} from "../../tokens";
 import {HasTemplateRef} from "../../types";
 
 @Component({
@@ -11,7 +11,7 @@ import {HasTemplateRef} from "../../types";
   encapsulation: ViewEncapsulation.None
 })
 export class ListItemComponent implements OnInit {
-  @ContentChild(ListItemTitle) title?: HasTemplateRef<void>;
+  @ContentChild(ListItemTitleToken) title?: HasTemplateRef<void>;
 
   constructor() {
   }

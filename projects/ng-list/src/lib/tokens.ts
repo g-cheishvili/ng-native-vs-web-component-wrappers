@@ -1,4 +1,5 @@
 import {InjectionToken} from "@angular/core";
-import {HasTemplateRef} from "./types";
+import {HasTemplateRef, HasValue} from "./types";
 
-export const ListItemTitle = new InjectionToken<HasTemplateRef<void>>('ListItemTitle');
+export const ListItemTitleToken = new InjectionToken<HasTemplateRef<void>>('ListItemTitle');
+export const SelectableListItemToken = new InjectionToken<HasValue>('SelectableListItem');
