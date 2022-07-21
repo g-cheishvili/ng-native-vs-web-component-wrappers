@@ -10,8 +10,8 @@
       ],
       "parserOptions": {
         "project": [
-          "projects/ng-list/tsconfig.lib.json",
-          "projects/ng-list/tsconfig.spec.json"
+          "projects/ng-selectable-list-demo/tsconfig.app.json",
+          "projects/ng-selectable-list-demo/tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },
@@ -20,12 +20,17 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "lib",
+            "prefix": "app",
             "style": "camelCase"
           }
         ],
         "@angular-eslint/component-selector": [
-          "off"
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
         ]
       }
     },
