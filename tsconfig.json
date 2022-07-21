@@ -13,7 +13,7 @@
     "sourceMap": true,
     "paths": {
       "ng-list": [
-        "dist/ng-list"
+        "projects/ng-list/src/public-api.ts"
       ]
     },
     "declaration": false,
