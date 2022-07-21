@@ -1,4 +1,4 @@
-import {Component, TemplateRef, ViewChild} from '@angular/core';
+import {Component, Input, TemplateRef, ViewChild} from '@angular/core';
 import '@ui5/webcomponents/dist/StandardListItem.js';
 
 @Component({
@@ -7,6 +7,7 @@ import '@ui5/webcomponents/dist/StandardListItem.js';
 })
 export class ListItemComponent {
   @ViewChild('ui5ListItem') ui5ListItemTemplate!: TemplateRef<void>;
+  @Input() value: any;
 
   constructor() {
   }

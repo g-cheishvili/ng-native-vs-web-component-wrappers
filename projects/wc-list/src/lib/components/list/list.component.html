@@ -1,4 +1,4 @@
-<ui5-list [mode]="listMode">
+<ui5-list [mode]="listMode" #ui5ListElement>
   <ng-container *ngFor="let listItem of listItems">
     <ng-template [ngTemplateOutlet]="listItem.ui5ListItemTemplate"></ng-template>
   </ng-container>

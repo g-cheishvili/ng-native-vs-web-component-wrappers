@@ -11,6 +11,7 @@
     "serve:ng-list-demo": "ng serve --project ng-list-demo",
     "serve:wc-list-demo": "ng serve --project wc-list-demo",
     "serve:ng-selectable-list-demo": "ng serve --project ng-selectable-list-demo",
+    "serve:wc-selectable-list-demo": "ng serve --project wc-selectable-list-demo",
     "build:all": "ng build --project ng-list && ng build --project ng-list-demo --stats-json && ng build --project ng-selectable-list-demo --stats-json"
   },
   "private": true,
