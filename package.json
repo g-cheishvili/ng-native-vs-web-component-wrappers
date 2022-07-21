@@ -12,7 +12,15 @@
     "serve:wc-list-demo": "ng serve --project wc-list-demo",
     "serve:ng-selectable-list-demo": "ng serve --project ng-selectable-list-demo",
     "serve:wc-selectable-list-demo": "ng serve --project wc-selectable-list-demo",
-    "build:all": "ng build --project ng-list && ng build --project ng-list-demo --stats-json && ng build --project ng-selectable-list-demo --stats-json"
+    "build:ng-list": "ng build --project ng-list",
+    "build:wc-list": "ng build --project wc-list",
+    "build:libraries": "yarn run build:ng-list && yarn run build:wc-list",
+    "build:ng-list-demo": "ng build --project ng-list-demo --stats-json",
+    "build:ng-selectable-list-demo": "ng build --project ng-selectable-list-demo --stats-json",
+    "build:wc-list-demo": "ng build --project wc-list-demo --stats-json",
+    "build:wc-selectable-list-demo": "ng build --project wc-selectable-list-demo --stats-json",
+    "build:applications": "yarn run build:ng-list-demo && yarn run build:wc-list-demo && yarn run build:ng-selectable-list-demo && yarn run build:wc-selectable-list-demo",
+    "build:all": "yarn run build:libraries && yarn run build:applications"
   },
   "private": true,
   "dependencies": {
