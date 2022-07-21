@@ -10,8 +10,8 @@
       ],
       "parserOptions": {
         "project": [
-          "projects/wc-list/tsconfig.lib.json",
-          "projects/wc-list/tsconfig.spec.json"
+          "./tsconfig.lib.json",
+          "./tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },
@@ -22,14 +22,6 @@
             "type": "attribute",
             "prefix": "lib",
             "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "lib",
-            "style": "kebab-case"
           }
         ]
       }

@@ -1,0 +1,5 @@
+<ui5-list>
+  <ng-container *ngFor="let listItem of listItems">
+    <ng-template [ngTemplateOutlet]="listItem.ui5ListItemTemplate"></ng-template>
+  </ng-container>
+</ui5-list>
