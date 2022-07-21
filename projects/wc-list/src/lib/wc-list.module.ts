@@ -1,16 +1,12 @@
-import { NgModule } from '@angular/core';
-import { WcListComponent } from './wc-list.component';
-
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
-  declarations: [
-    WcListComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    WcListComponent
-  ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  declarations: [],
+  imports: [CommonModule],
+  exports: []
 })
-export class WcListModule { }
+export class WcListModule {
+}

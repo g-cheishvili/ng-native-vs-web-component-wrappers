@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {NgListComponent} from './ng-list.component';
 import {ListComponent} from './components/list/list.component';
 import {ListItemComponent} from './components/list-item/list-item.component';
 import {ListItemTitleDirective} from "./directives/list-item-title/list-item-title.directive";
@@ -10,7 +9,6 @@ import {SelectableListItemDirective} from "./directives/selectable-list-item/sel
 
 @NgModule({
   declarations: [
-    NgListComponent,
     ListComponent,
     ListItemComponent,
     ListItemTitleDirective,
@@ -21,7 +19,6 @@ import {SelectableListItemDirective} from "./directives/selectable-list-item/sel
     CommonModule
   ],
   exports: [
-    NgListComponent,
     ListComponent,
     ListItemComponent,
     ListItemTitleDirective,

@@ -2,7 +2,6 @@
  * Public API Surface of ng-list
  */
 
-export * from './lib/ng-list.component';
 export * from './lib/ng-list.module';
 export * from './lib/components/list/list.component';
 export * from './lib/components/list-item/list-item.component';
