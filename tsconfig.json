@@ -17,6 +17,9 @@
       ],
       "wc-list": [
         "projects/wc-list/src/public-api.ts"
+      ],
+      "dist": [
+        "dist"
       ]
     },
     "declaration": false,
@@ -29,7 +32,9 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
