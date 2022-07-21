@@ -14,6 +14,9 @@
     "paths": {
       "ng-list": [
         "projects/ng-list/src/public-api.ts"
+      ],
+      "wc-list": [
+        "projects/wc-list/src/public-api.ts"
       ]
     },
     "declaration": false,

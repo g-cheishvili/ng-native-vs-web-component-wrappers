@@ -3,15 +3,12 @@
     List with selectable logic attached
   </div>
   <div class="fd-card__content">
-    <ul ng-list selectable [multiple]="true" [(ngModel)]="selectedItems">
+    <ul ng-list selectable [multiple]="true">
       <li ng-list-item selectable [value]="item" *ngFor="let item of items">
         <ng-template ng-list-item-title>
           {{ item }}
         </ng-template>
       </li>
     </ul>
-  </div>
-  <div class="fd-card__footer">
-    Selected items: {{ selectedItems | json }}
   </div>
 </div>

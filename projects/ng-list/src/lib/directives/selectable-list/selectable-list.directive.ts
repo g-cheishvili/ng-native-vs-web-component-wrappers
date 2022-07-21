@@ -5,6 +5,8 @@ import {SelectableItem} from "../../types";
 import {coerceArray} from "@angular/cdk/coercion";
 import {map, Observable, skip, startWith, takeUntil, tap} from "rxjs";
 
+console.log('SelectableListDirective is in bundle');
+
 @Directive({
   selector: 'ul[ng-list][selectable]'
 })
