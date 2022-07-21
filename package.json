@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "serve:ng-list-demo": "ng serve --project ng-list-demo"
+    "serve:ng-list-demo": "ng serve --project ng-list-demo",
+    "serve:ng-selectable-list-demo": "ng serve --project ng-selectable-list-demo"
   },
   "private": true,
   "dependencies": {
