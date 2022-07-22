@@ -1,0 +1,38 @@
+name: Create release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-release:
+    name: Run release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch from origin repo
+        uses: actions/checkout@v3
+        with:
+          ref: main # always fetch from main branch
+          fetch-depth: 0
+          token: ${{ secrets.GHACTIONS }}
+
+      - name: Setup Node.js and Cache
+        uses: ./.github/actions/nodejs
+
+      - name: Build
+        uses: ./.github/actions/build
+
+      - uses: ./.github/actions/set-up-git
+        name: Set up git user
+        with:
+          name: ${{ secrets.GH_NAME }}
+          email: ${{ secrets.GH_EMAIL }}
+
+      - name: Publish to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: storybook-static
+          token: ${{ github.token }}
+          repository-name: ${{ github.repository }}

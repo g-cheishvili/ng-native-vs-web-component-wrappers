@@ -1,0 +1,9 @@
+name: Build prod
+description: Builds the prod version of the package
+
+runs:
+  using: composite
+  steps:
+    - name: Build prod
+      run: yarn run build:all && yarn run analyze-bundles && ng build
+      shell: bash
