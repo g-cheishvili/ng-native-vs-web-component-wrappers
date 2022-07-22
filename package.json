@@ -12,6 +12,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "serve": "yarn run build:all && yarn run analyze-bundles && ng serve",
+    "build:ci": "ng build --base-href /ng-native-vs-web-component-wrappers/",
     "serve:ng-list-demo": "ng serve --project ng-list-demo",
     "serve:wc-list-demo": "ng serve --project wc-list-demo",
     "serve:ng-selectable-list-demo": "ng serve --project ng-selectable-list-demo",
