@@ -19,6 +19,13 @@ const getType = (fileName) => {
     return 'runtime';
   }
 }
+
+const deltas = (before, after) => {
+  const bytes = before - after;
+  const percentage = Math.round(bytes / (before / 100))
+  return {bytes, percentage};
+}
+
 const calculateDeltas = obj => {
   return {
     ...obj,
@@ -28,18 +35,9 @@ const calculateDeltas = obj => {
         return {
           ...asset,
           deltas: {
-            size: {
-              bytes: asset.size - obj.withSelection.assets[index].size,
-              percentage: Math.round((asset.size - obj.withSelection.assets[index].size) / asset.size * 100)
-            },
-            parsed: {
-              bytes: asset.parsed - obj.withSelection.assets[index].parsed,
-              percentage: Math.round((asset.parsed - obj.withSelection.assets[index].parsed) / asset.parsed * 100)
-            },
-            gzipSize: {
-              bytes: asset.gzipSize - obj.withSelection.assets[index].gzipSize,
-              percentage: Math.round((asset.gzipSize - obj.withSelection.assets[index].gzipSize) / asset.gzipSize * 100)
-            }
+            size: deltas(obj.withSelection.assets[index].size, asset.size),
+            parsed: deltas(obj.withSelection.assets[index].parsed, asset.parsed),
+            gzipSize: deltas(obj.withSelection.assets[index].gzipSize, asset.gzipSize)
           }
         }
       })
