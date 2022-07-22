@@ -5,5 +5,5 @@ runs:
   using: composite
   steps:
     - name: Build prod
-      run: yarn run build:all && yarn run analyze-bundles && ng build
+      run: yarn run build:all && yarn run analyze-bundles && ng build --base-href /ng-native-vs-web-component-wrappers
       shell: bash
