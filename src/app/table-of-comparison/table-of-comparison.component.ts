@@ -17,6 +17,6 @@ export class TableOfComparisonComponent {
   }
 
   projectStatsLink(projectName: string): SafeUrl {
-    return this.sanitizer.bypassSecurityTrustUrl(`/${projectName}/stats.html`);
+    return this.sanitizer.bypassSecurityTrustUrl(`/ng-native-vs-web-component-wrappers/${projectName}/stats.html`);
   }
 }
