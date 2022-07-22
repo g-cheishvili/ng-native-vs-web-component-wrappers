@@ -1,7 +1,7 @@
 <table fd-table>
   <thead fd-table-header>
   <tr fd-table-row>
-    <th fd-table-cell>Asset type</th>
+    <th fd-table-cell colspan="2">Asset type</th>
     <th fd-table-cell>With Selection</th>
     <th fd-table-cell>Without Selection</th>
     <th fd-table-cell>Tree-shake result</th>
@@ -12,6 +12,11 @@
     <tr fd-table-row>
       <td fd-table-cell rowspan="3">
         {{assetType}}
+      </td>
+      <td fd-table-cell style="width: 4rem; padding-left: 0.5rem">
+        <p fd-table-text>
+          Size
+        </p>
       </td>
       <td fd-table-cell>
         <p fd-table-text>
@@ -31,6 +36,11 @@
       </td>
     </tr>
     <tr fd-table-row>
+      <td fd-table-cell style="padding-left: 0.5rem">
+        <p fd-table-text>
+          Parsed
+        </p>
+      </td>
       <td fd-table-cell>
         <p fd-table-text>
           {{ data.withSelection.assets[index].parsed | inKb }}
@@ -49,6 +59,11 @@
       </td>
     </tr>
     <tr fd-table-row>
+      <td fd-table-cell style="padding-left: 0.5rem">
+        <p fd-table-text>
+          Gzip
+        </p>
+      </td>
       <td fd-table-cell>
         <p fd-table-text>
           {{ data.withSelection.assets[index].gzipSize | inKb }}
@@ -68,4 +83,19 @@
     </tr>
   </ng-container>
   </tbody>
+  <tfoot fd-table-footer>
+  <tr fd-table-row>
+    <td fd-table-cell colspan="2"></td>
+    <td fd-table-cell>
+      <a fd-link [href]="projectStatsLink(data.withSelection.projectName)" target="_blank">
+        Open Bundle Analyzer
+      </a>
+    </td>
+    <td fd-table-cell>
+      <a fd-link [href]="projectStatsLink(data.withoutSelection.projectName)" target="_blank">
+        Open Bundle Analyzer
+      </a>
+    </td>
+  </tr>
+  </tfoot>
 </table>

@@ -24,4 +24,4 @@ export type TechType = 'angularComponents' | 'webComponents';
 
 export type ProjectType = 'withoutSelection' | 'withSelection';
 
-export type AnalyzedData = Record<TechType, Record<ProjectType, { assets: BundleAsset[] }>>;
+export type AnalyzedData = Record<TechType, Record<ProjectType, { projectName: string, assets: BundleAsset[] }>>;

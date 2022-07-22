@@ -22,9 +22,24 @@
               "src/favicon.ico",
               "src/assets",
               {
-                "input": "dist",
-                "output": "dist",
-                "glob": "**/*"
+                "input": "dist/ng-list-demo",
+                "output": "ng-list-demo",
+                "glob": "stats.html"
+              },
+              {
+                "input": "dist/ng-selectable-list-demo",
+                "output": "ng-selectable-list-demo",
+                "glob": "stats.html"
+              },
+              {
+                "input": "dist/wc-list-demo",
+                "output": "wc-list-demo",
+                "glob": "stats.html"
+              },
+              {
+                "input": "dist/wc-selectable-list-demo",
+                "output": "wc-selectable-list-demo",
+                "glob": "stats.html"
               },
               {
                 "glob": "**/css_variables.css",

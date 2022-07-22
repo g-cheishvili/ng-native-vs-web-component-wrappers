@@ -1,6 +1,9 @@
 {
   "name": "angular-native-components-vs-web-components",
   "version": "0.0.0",
+  "repository": {
+    "url": "https://github.com/g-cheishvili/ng-native-vs-web-component-wrappers.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
