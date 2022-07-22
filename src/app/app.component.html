@@ -1,5 +1,21 @@
-<ul>
-  <li *ngFor="let mainFileSize of mainFileSizes">
-    {{ mainFileSize }}
-  </li>
-</ul>
+<fd-card>
+  <fd-card-header>
+    <h3 fd-card-title>
+      Angular Based components
+    </h3>
+  </fd-card-header>
+  <fd-card-content>
+    <app-table-of-comparison [data]="data.angularComponents"></app-table-of-comparison>
+  </fd-card-content>
+</fd-card>
+
+<fd-card>
+  <fd-card-header>
+    <h3 fd-card-title>
+      Web Component Based components
+    </h3>
+  </fd-card-header>
+  <fd-card-content>
+    <app-table-of-comparison [data]="data.webComponents"></app-table-of-comparison>
+  </fd-card-content>
+</fd-card>

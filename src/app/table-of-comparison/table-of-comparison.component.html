@@ -1,0 +1,71 @@
+<table fd-table>
+  <thead fd-table-header>
+  <tr fd-table-row>
+    <th fd-table-cell>Asset type</th>
+    <th fd-table-cell>With Selection</th>
+    <th fd-table-cell>Without Selection</th>
+    <th fd-table-cell>Tree-shake result</th>
+  </tr>
+  </thead>
+  <tbody fd-table-body>
+  <ng-container *ngFor="let assetType of assetTypes; let index = index">
+    <tr fd-table-row>
+      <td fd-table-cell rowspan="3">
+        {{assetType}}
+      </td>
+      <td fd-table-cell>
+        <p fd-table-text>
+          {{ data.withSelection.assets[index].size | inKb }}
+        </p>
+      </td>
+      <td fd-table-cell>
+        <p fd-table-text>
+          {{ data.withoutSelection.assets[index].size | inKb }}
+        </p>
+      </td>
+      <td fd-table-cell>
+        <p fd-table-text>
+          {{ data.withoutSelection.assets[index].deltas.size.bytes | inKb }}
+          ( {{ data.withoutSelection.assets[index].deltas.size.percentage }}% )
+        </p>
+      </td>
+    </tr>
+    <tr fd-table-row>
+      <td fd-table-cell>
+        <p fd-table-text>
+          {{ data.withSelection.assets[index].parsed | inKb }}
+        </p>
+      </td>
+      <td fd-table-cell>
+        <p fd-table-text>
+          {{ data.withoutSelection.assets[index].parsed | inKb }}
+        </p>
+      </td>
+      <td fd-table-cell>
+        <p fd-table-text>
+          {{ data.withoutSelection.assets[index].deltas.parsed.bytes | inKb }}
+          ( {{ data.withoutSelection.assets[index].deltas.parsed.percentage }}% )
+        </p>
+      </td>
+    </tr>
+    <tr fd-table-row>
+      <td fd-table-cell>
+        <p fd-table-text>
+          {{ data.withSelection.assets[index].gzipSize | inKb }}
+        </p>
+      </td>
+      <td fd-table-cell>
+        <p fd-table-text>
+          {{ data.withoutSelection.assets[index].gzipSize | inKb }}
+        </p>
+      </td>
+      <td fd-table-cell>
+        <p fd-table-text>
+          {{ data.withoutSelection.assets[index].deltas.gzipSize.bytes | inKb }}
+          ( {{ data.withoutSelection.assets[index].deltas.gzipSize.percentage }}% )
+        </p>
+      </td>
+    </tr>
+  </ng-container>
+  </tbody>
+</table>

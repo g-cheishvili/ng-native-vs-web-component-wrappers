@@ -20,16 +20,38 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "input": "dist",
+                "output": "dist",
+                "glob": "**/*"
+              },
+              {
+                "glob": "**/css_variables.css",
+                "input": "./node_modules/@sap-theming/theming-base-content/content/Base/baseLib/",
+                "output": "./assets/theming-base/"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/fundamental-styles/dist/theming/",
+                "output": "./assets/fundamental-styles-theming/"
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/fundamental-styles/dist/icon.css",
+              "./node_modules/@sap-theming/theming-base-content/content/Base/baseLib/sap_horizon/css_variables.css",
+              "./node_modules/fundamental-styles/dist/theming/sap_horizon.css",
+              {
+                "input": "src/theming/sap_horizon_fonts.css",
+                "inject": true,
+                "bundleName": "sap_horizon_fonts"
+              }
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
-              "optimization": true,
               "budgets": [
                 {
                   "type": "initial",
