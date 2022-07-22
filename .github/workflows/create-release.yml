@@ -33,6 +33,6 @@ jobs:
       - name: Publish to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: storybook-static
+          folder: dist/angular-native-components-vs-web-components
           token: ${{ github.token }}
           repository-name: ${{ github.repository }}
