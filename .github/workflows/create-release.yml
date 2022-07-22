@@ -16,7 +16,7 @@ jobs:
         with:
           ref: main # always fetch from main branch
           fetch-depth: 0
-          token: ${{ secrets.GHACTIONS }}
+          token: ${{ github.token }}
 
       - name: Setup Node.js and Cache
         uses: ./.github/actions/nodejs
