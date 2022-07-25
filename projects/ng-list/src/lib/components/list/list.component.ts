@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'ul[ng-list]',
@@ -10,6 +10,11 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ListComponent implements OnInit {
+  @Input()
+  set someDistinctNameForInput(val: string) {
+    console.log({val})
+  }
+
   constructor() {
   }
 
